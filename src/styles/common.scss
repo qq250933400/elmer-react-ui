@@ -1,0 +1,23 @@
+@mixin borderRadius($radiux: 3px) {
+    border-radius: $radiux;
+    -webkit-border-radius: $radiux;
+    -moz-border-radius: $radiux;
+    -ms-border-radius: $radiux;
+    -o-border-radius: $radiux;
+}
+
+@mixin setTransition($transition: all 0.8s ease) {
+    transition: $transition;
+    -webkit-transition: $transition;
+    -moz-transition: $transition;
+    -ms-transition: $transition;
+    -o-transition: $transition;
+}
+
+@mixin setAnimation($animation: all 0.8s ease) {
+    animation: $animation;
+    -webkit-animation: $animation;
+    -moz-animation: $animation;
+    -ms-animation: $animation;
+    -o-animation: $animation;
+}

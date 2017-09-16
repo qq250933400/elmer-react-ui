@@ -1,0 +1,11 @@
+.Layout1020 {
+    display: block;
+    width: 1190px;
+    margin-left: -960px;
+    left: 50%;
+    & > div {
+        display: block;
+        width: 1020px;
+        margin: 0 auto;
+    }
+}

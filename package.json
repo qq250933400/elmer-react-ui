@@ -1,19 +1,18 @@
 {
-  "name": "web-frame-work",
+  "name": "elmer-react-ui",
   "version": "1.0.0",
-  "description": "web-frame-work to use build website",
-  "main": "index.js",
+  "description": "elmer-react-ui",
+  "main": "./src/index.js",
   "scripts": {
     "test": "jest",
     "dev": "better-npm-run dev",
     "build": "npm run clear && better-npm-run build",
     "clear": "rimraf build",
     "lint": "eslint src",
-    "lng": "babel-node ./webpack/languageBuild.js",
-    "lnglint": "eslint webpack",
+    "lib": "babel src/ --out-dir lib/",
     "cmd": "eslint ./src/builder && babel-node src/builder/index.js",
     "server": "babel-node ./server/dev-server.js",
-    "storybook": "start-storybook -p 6006",
+    "storybook": "eslint src && start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "keywords": [
