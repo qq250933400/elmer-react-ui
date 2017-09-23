@@ -1,0 +1,318 @@
+$yellowColor: #EF440E;
+$blueColor: #0047FE;
+.HomeModule {
+    display: block;
+    min-width: 300px;
+    .HomeMoudleHeader,
+    .HomeMoudleHeader > span {
+        display: block;
+    }
+    .HomeMoudleHeader {
+        overflow: hidden;
+        & > span {
+            position: relative;
+            float: left;
+            max-width: 80%;
+            padding-left: 10px;
+            padding-right: 10px;
+            &::before {
+                position: absolute;
+                content: '';
+                display: block;
+                width: 10px;
+                left: 0;
+                top: 0;
+            }
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+            }
+        }
+        & > a {
+            display: block;
+            float: right;
+            padding-right: 10px;
+            font-size: 14px;
+            color: #333;
+            text-decoration: none;
+            font-family: "宋体";
+            text-align: right;
+        }
+    }
+    .HomeMoudleContext {
+        display: block;
+        min-height: 50px;
+        ul {
+            list-style: none;
+            margin: 5px;
+            padding: 0;
+            li {
+                position: relative;
+                list-style: none;
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 10px;
+                a {
+                    display: block;
+                    cursor: pointer;
+                    & > img {
+                        display: none;
+                    }
+                    & > div {
+                        display: block;
+                        height: 30px;
+                        padding-left: 10px;
+                        padding-right: 100px;
+                        position: relative;
+                        & > span {
+                            display: block;
+                            font-size: 14px;
+                            height: 30px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                        }
+                        & > i {
+                            display: block;
+                            font-style: normal;
+                            font-size: 12px;
+                            color: #999;
+                            position: absolute;
+                            right: 10px;
+                            top: 0;
+                            height: 30px;
+                            line-height: 30px;
+                            width: 100px;
+                            text-overflow: ellipsis;
+                            white-space: nowrap;
+                            overflow: hidden;
+                            text-align: right;
+                        }
+                    }
+                }
+            }
+            li::before {
+                content: "●";
+                display: block;
+                width: 10px;
+                height: 10px;
+                position: absolute;
+                left: 5px;
+                top: 10px;
+                line-height: 10px;
+            }
+            li:first-child{
+                height: 80px;
+                a {
+                    padding: 10px 0;
+                    padding-left: 80px;
+                    position: relative;
+                    img {
+                        width: 60px;
+                        height: 60px;
+                        position: absolute;
+                        left: 10px;
+                        top: 10px;
+                        display: block;
+                    }
+                    & > div {
+                        height: 80px;
+                        padding-left: 0;
+                        padding-right: 10px;
+                        & > span {
+                            height: 40px;
+                            line-height: 20px;
+                            overflow: hidden;
+                            white-space: pre-wrap;
+                            float: initial;
+                        }
+                        & > i {
+                            display: block;
+                            float: initial;
+                            position: initial;
+                            text-align: left;
+                        }
+                    }
+                }
+            }
+            li:first-child::before {
+                content: "";
+                display: none;
+            }
+        }
+    }
+}
+.HomeModuleDefaultTheme,
+.HomeModuleYellowTheme,
+.HomeModuleYellowDetailTheme {
+    border: 1px solid #E7E7E7;
+    .HomeMoudleHeader > span::before,
+    .HomeMoudleHeader > span::after,
+    .HomeMoudleHeader > a {
+        background: url(../image/team_res.png);
+    }
+    .HomeMoudleHeader > a:hover {
+        color: $yellowColor;
+    }
+    .HomeMoudleHeader,
+    .HomeMoudleHeader > span,
+    .HomeMoudleHeader > span::before,
+    .HomeMoudleHeader > span::after,
+    .HomeMoudleHeader > a {
+        height: 35px;
+        line-height: 35px;
+    }
+    .HomeMoudleHeader {
+        background: url(../image/team_streach.png);
+    }
+    .HomeMoudleHeader {
+        background-position: 0 -136px;
+        & > span {
+            padding-left: 40px;
+            background: url(../image/team_streach.png);
+            color: #fff;
+            &::before {
+                width: 35px;
+                background-position: -94px -97px;
+            }
+            &::after {
+                width: 42px;
+                right: -42px;
+                background-position: 0 0;
+            }
+        }
+        & > a {
+            width: 137px;
+            background-position: 0 -51px;
+        }
+    }
+    .HomeMoudleContext {
+        ul li:before {
+            color: $yellowColor;
+        }
+        ul li:hover {
+            a div span {
+                color: $yellowColor;
+            }
+            a div i {
+                color: #666;
+            }
+        }
+    }
+}
+
+.HomeModuleBlueTheme,
+.HomeModuleBlueDetailTheme {
+    border: 1px solid #E7E7E7;
+    .HomeMoudleHeader > span::before,
+    .HomeMoudleHeader > span::after,
+    .HomeMoudleHeader > a {
+        background: url(../image/team_res.png);
+    }
+    .HomeMoudleHeader > a:hover {
+        color: $blueColor;
+    }
+    .HomeMoudleHeader,
+    .HomeMoudleHeader > span,
+    .HomeMoudleHeader > span::before,
+    .HomeMoudleHeader > span::after,
+    .HomeMoudleHeader > a {
+        height: 35px;
+        line-height: 35px;
+    }
+    .HomeMoudleHeader {
+        background: url(../image/team_streach.png);
+    }
+    .HomeMoudleHeader {
+        background-position: 0 -136px;
+        & > span {
+            padding-left: 40px;
+            background: url(../image/team_streach.png);
+            background-position: 0 -178px;
+            color: #fff;
+            &::before {
+                width: 35px;
+                background-position: -258px -97px;
+            }
+            &::after {
+                width: 42px;
+                right: -42px;
+                background-position: -96px 0;
+            }
+        }
+        & > a {
+            width: 137px;
+            background-position: 0 -51px;
+        }
+    }
+    .HomeMoudleContext {
+        ul {
+            li:before {
+                color: $blueColor;
+            }
+            li:hover {
+                a div span {
+                    color: $blueColor;
+                }
+                a div i {
+                    color: #666;
+                }
+            }
+        }
+    }
+}
+
+.HomeModuleBlueDetailTheme,.HomeModuleYellowDetailTheme {
+    .HomeMoudleContext{
+        ul {
+            li:before {
+                content: "●";
+                font-family: "微软雅黑";
+                font-size: 10px;
+            }
+            li:first-child {
+                position: relative;
+                list-style: none;
+                display: block;
+                height: 30px;
+                line-height: 30px;
+                padding-left: 10px;
+                & > a,
+                & > a > div,
+                & > a > div > span {
+                    padding: 0;
+                    height: 30px;
+                    line-height: 30px;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+                & > a {
+                    & > div {
+                        padding-left: 10px;
+                        padding-right: 100px;
+                        & > i {
+                            display: block;
+                            position: absolute;
+                            right: 10px;
+                            top: 0;
+                            text-align: right;
+                        }
+                    }
+                    & > img {
+                        display: none;
+                        height: 30px;
+                        line-height: 30px;
+                        padding-left: 0;
+                    }
+                }
+            }
+            li:first-child::before {
+                content: "●";
+                display: block;
+            }
+        }
+    }
+}

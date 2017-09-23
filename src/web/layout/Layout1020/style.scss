@@ -1,8 +1,10 @@
 .Layout1020 {
+    position: relative;
     display: block;
-    width: 1190px;
+    width: 1920px;
     margin-left: -960px;
     left: 50%;
+    background: url(../../image/team_top_bk.jpg);
     & > div {
         display: block;
         width: 1020px;

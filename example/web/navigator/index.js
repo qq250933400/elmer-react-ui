@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { BlueNavigator } from '../../src/index';
+import { BlueNavigator } from '../../../src/index';
 
 class Web extends Component {
     constructor(props) {

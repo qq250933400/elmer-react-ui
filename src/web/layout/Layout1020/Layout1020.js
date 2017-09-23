@@ -5,7 +5,10 @@ import styles from './style.scss';
 class Layout1020 extends Component {
     render () {
         return (
-            <div className={styles.Layout1020}>
+            <div className={styles.Layout1020} style={{
+                background: this.props.background
+            }}
+            >
                 <div>
                     {this.props.children}
                 </div>
@@ -15,12 +18,17 @@ class Layout1020 extends Component {
 }
 
 Layout1020.propTypes = {
+    background: PropTypes.string.isRequired,
     children: PropTypes.oneOfType([
         PropTypes.string,
         PropTypes.number,
         PropTypes.element,
         PropTypes.node
     ])
+};
+
+Layout1020.defaultProps = {
+    background: 'transparent'
 };
 
 export default Layout1020;

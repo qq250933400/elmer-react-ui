@@ -1,0 +1,113 @@
+@import '../../styles/common.scss';
+
+.listClear,
+.CarouselFigure_focusBtn,
+.CarouselFigure_focusBtn li,
+.CarouselFigure_Items ul,
+.CarouselFigure_Items ul li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.CarouselFigure {
+    display: block;
+    position: relative;
+    overflow: hidden;
+    .CarouselFigure_Items {
+        display: block;
+        position: relative;
+        ul {
+            display: block;
+            position: relative;
+            overflow: hidden;
+            width: 100%;
+        }
+        ul,
+        li{
+            width: 100%;
+            height: auto;
+            overflow: hidden;
+            position: absolute;
+            left: 0;
+            top: 0;
+            & > div {
+                display: block;
+                & > img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    .CarouselFigure_focusBtn {
+        display: block;
+        height: 20px;
+        position: absolute;
+        width: 100%;
+        left: 0;
+        bottom: 10px;
+        text-align: right;
+        li {
+            display: inline-block;
+            font-size: 0;
+            width: 10px;
+            height: 10px;
+            border-radius: 100%;
+            background: #fff;
+            margin-right: 4px;
+            cursor: pointer;
+            i {
+                display: none;
+            }
+            &:last-child {
+                margin-right: 14px;
+            }
+        }
+        .active {
+            background: #EE9714;
+        }
+    }
+    .CarouselFigure_PrevButton,
+    .CarouselFigure_NextButton {
+        display: block;
+        position: absolute;
+        height: 50px;
+        width: 30px;
+        top: 50%;
+        margin-top: -25px;
+        border: 0;
+        background: rgba(50, 50, 50, 0.4);
+        -webkit-appearance: none;
+        outline: none;
+        color: #fff;
+        font-size: 18px;
+        font-family: "宋体";
+
+        @include setTransition(all 0.4s ease);
+    }
+    .CarouselFigure_PrevButton:hover,
+    .CarouselFigure_NextButton:hover {
+        background: rgba(10, 10, 10, 0.6);
+    }
+    .CarouselFigure_PrevButton:active,
+    .CarouselFigure_NextButton:active {
+        background: rgba(10, 10, 10, 0.8);
+    }
+    .CarouselFigure_PrevButton {
+        left: 0;
+
+        @include setTransform(translateX(-100%));
+    }
+    .CarouselFigure_NextButton {
+        right: 0;
+        @include setTransform(translateX(100%));
+    }
+}
+
+.CarouselFigure:hover {
+    .CarouselFigure_PrevButton {
+        @include setTransform(translateX(0%));
+    }
+    .CarouselFigure_NextButton {
+        @include setTransform(translateX(0%));
+    }
+}

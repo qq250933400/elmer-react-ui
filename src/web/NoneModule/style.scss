@@ -1,0 +1,71 @@
+$hoverColor: #0047FF;
+.NoneModule {
+    display: block;
+    border-style: solid;
+    border-color: #EDEDED;
+    border-width: 0 1px 1px 1px;
+    background: url(../image/team_dl_bk.jpg);
+    background-repeat: repeat-x;
+    background-position: left bottom;
+    .NoneModuleHeader {
+        display: block;
+        height: 37px;
+        line-height: 37px;
+        background: url(../image/team_streach.png) repeat-x;
+        background-position: 0 -136px;
+        & > span {
+            display: block;
+            height: 37px;
+            line-height: 37px;
+            text-align: center;
+            font-size: 14px;
+            font-weight: bold;
+            color: #333;
+        }
+    }
+    .NoneModuleContext {
+        display: block;
+        margin: 5px;
+        padding-bottom: 9px;
+        box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            li, li a {
+                display: block;
+                height: 28px;
+                line-height: 28px;
+            }
+            li {
+                padding-right: 20px;
+                position: relative;
+                cursor: pointer;
+                a {
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    font-size: 15px;
+                    color: #333;
+                    text-decoration: none;
+                }
+                a:after {
+                    content: ">";
+                    display: block;
+                    height: 28px;
+                    line-height: 28px;
+                    position: absolute;
+                    right: 0px;
+                    top: 0;
+                    font-family: "宋体";
+                }
+            }
+            li:hover {
+                a {
+                    color: $hoverColor;
+                }
+            }
+        }
+    }
+}

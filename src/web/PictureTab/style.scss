@@ -1,0 +1,73 @@
+@import '../../styles/common.scss';
+
+.PictureTabHead,
+.PictureTabHead>div,
+.PictureTabHead>div>.active>i {
+    background:url("../image/team_streach.png");
+    color:#3391A1;
+}
+.PictureTabHead>div:before,
+.PictureTabHead>div before,
+.PictureTabHead>div:after,
+.PictureTabHead>div after,
+.PictureTabHead>div>.active:before,
+.PictureTabHead>div>.active before,
+.PictureTabHead>div>.active:after,
+.PictureTabHead>div>.active after {
+    background:url("../image/team_res.png");
+}
+.PictureTab{
+    display:block;border:1px solid #C4D8F5;
+    .PictureTabHead{
+        display:block;height:45px;background-position:0 -220px;position:relative;
+        >a{text-decoration:none;color:#666;position:absolute;right:10px;top:0;font-size:14px;display:block;height:40px;line-height:40px;
+            >i{font-style:normal;font-family:"宋体";}
+        }
+        >a:hover {
+            color:#54b1c3
+        }
+        >div{
+            display:block;height:40px;line-height:40px;padding-left:20px;padding-right:50px;float:left;position:relative;top:0;
+            background-position:0 -220px;
+            >span{
+                display:block;height:30px;line-height:30px;padding:0 10px;float:left;margin-top:10px;font-size:16px;font-weight:bolder;color:#54b1c3;cursor:pointer;position:relative;
+                outline: none;
+            }
+            >span>i{display:block;height:30px;padding:0 5px;font-style: normal;}
+            .active>i{background-position:0 -268px;}
+            .active:before,.active before,.active:after,.active:after{content:"";display:block;width:10px;height:30px;position:absolute;top:0;}
+            .active:before,.active before{left:0;background-position:-136px -96px;}
+            .active:after,.active:after{right:0;background-position:-163px -96px;}
+        }
+        >div:before,>div before,>div:after,>div after,>div:after,>div after{display:block;height:40px;content:"";position:absolute;}
+        >div:before,>div before{
+            width:20px;background-position:-178px -3px;left:-1px;top:0px;
+        }
+        >div:after,>div after{
+            width:50px;position:absolute;right:0;top:0;background-position:0 -94px;
+        }
+    }
+    .PictureTabCt{
+        display:block;min-height:220px;background:url("../image/team_bottom.jpg") repeat-x left bottom;background-size:100% 220px;
+        .PictureTabPage{
+            display:none;width:100%;min-height:220px;padding-bottom: 10px;
+            .PictureTabList{
+                display:block;
+                list-style: none;
+                margin: 0;
+                padding: 4px 0;
+                overflow: hidden;
+                li,li>a{display:block;width:179px;position:relative;}
+                li{float:left;margin-left:8px;margin-top:10px;border:1px solid #E1E1E3;background:#fff;overflow:hidden;}
+                li>a{
+                    text-decoration:none;padding-bottom:5px;
+                    img{width:100%;height:132px;}
+                    >span{display:block;height:25px;line-height:25px;font-size:14px;padding:0 10px;text-overflow:ellipsis;white-space:nowrap;overflow:hidden;}
+                    >i{display:block;height:20px;line-height:20px;font-size:12px;color:#999;padding:0 10px;font-style: normal;}
+                }
+                li:hover{border-color:#00A6FD !important;@include setBoxShadow(0 1px 5px #00A6FD);}
+            }
+        }
+        .active{display:block;}
+    }
+}
